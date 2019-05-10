@@ -60,6 +60,7 @@ namespace StringIO_TextView
         {
             if(e.KeyChar == (char)13)
             {
+                e.Handled = true; //이벤트 처리가 끝났음을 알려준다.
                 if (TextCheck())
                 {
                     this.lblResult.Text = this.OrgStr + this.txtEdit.Text;
